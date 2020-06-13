@@ -1,6 +1,5 @@
 package com.mang.example.lombok.app.store.controller;
 
-import com.mang.example.lombok.app.review.model.ReviewVO;
 import com.mang.example.lombok.app.store.model.StoreVO;
 import com.mang.example.lombok.app.store.service.StoreService;
 import lombok.RequiredArgsConstructor;
@@ -33,6 +32,7 @@ public class StoreController {
 
     @GetMapping(value = "/add")
     private ResponseEntity add(@RequestBody StoreVO storeVO){
+        log.debug(storeVO.toString());
         return ResponseEntity.ok(storeService.save(storeVO));
     }
 
