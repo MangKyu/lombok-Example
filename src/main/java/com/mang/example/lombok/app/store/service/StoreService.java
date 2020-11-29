@@ -1,17 +1,17 @@
 package com.mang.example.lombok.app.store.service;
 
-import com.mang.example.lombok.app.store.model.StoreVO;
+import com.mang.example.lombok.app.store.domain.Store;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface StoreService {
 
-    List<StoreVO> findAll();
+    List<Store> findAll();
 
-    StoreVO save(StoreVO storeVO);
+    Store save(Store storeVO);
 
-    Optional<StoreVO> findById(Long id);
+    Optional<Store> findById(Long id);
 
-    List<StoreVO> findAllByCompanyName(String searchKeyWord);
+    List<Store> findAllByCompanyName(String searchKeyWord);
 }

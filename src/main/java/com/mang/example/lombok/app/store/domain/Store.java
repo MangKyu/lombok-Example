@@ -1,6 +1,6 @@
-package com.mang.example.lombok.app.store.model;
+package com.mang.example.lombok.app.store.domain;
 
-import com.mang.example.lombok.app.common.model.CommonVO;
+import com.mang.example.lombok.app.common.domain.Common;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Getter
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"companyName", "roadAddr"}, callSuper = false)
-public class StoreVO extends CommonVO {
+public class Store extends Common {
 
     private String companyName;                                 // 상호명
     private String industryTypeCode;                            // 업종코드
@@ -33,7 +33,7 @@ public class StoreVO extends CommonVO {
     private String sigunName;                                   // 시군 이름
 
     @Builder
-    public StoreVO(String companyName, String industryTypeCode){
+    public Store(String companyName, String industryTypeCode){
         this.companyName = companyName;
         this.industryTypeCode = industryTypeCode;
     }

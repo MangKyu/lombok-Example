@@ -1,6 +1,6 @@
 package com.mang.example.lombok.app.store.service;
 
-import com.mang.example.lombok.app.store.model.StoreVO;
+import com.mang.example.lombok.app.store.domain.Store;
 import com.mang.example.lombok.app.store.repository.StoreRepository;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -17,22 +17,22 @@ public class StoreServiceImpl implements StoreService {
     private StoreRepository storeRepository;
 
     @Override
-    public List<StoreVO> findAll() {
+    public List<Store> findAll() {
         return storeRepository.findAll();
     }
 
     @Override
-    public StoreVO save(StoreVO storeVO) {
+    public Store save(Store storeVO) {
         return storeRepository.save(storeVO);
     }
 
     @Override
-    public Optional<StoreVO> findById(Long id) {
+    public Optional<Store> findById(Long id) {
         return storeRepository.findById(id);
     }
 
     @Override
-    public List<StoreVO> findAllByCompanyName(String searchKeyWord) {
+    public List<Store> findAllByCompanyName(String searchKeyWord) {
         return storeRepository.findAllByCompanyNameLike(searchKeyWord);
     }
 

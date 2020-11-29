@@ -1,4 +1,4 @@
-package com.mang.example.lombok.app.common.model;
+package com.mang.example.lombok.app.common.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @Getter
 @NoArgsConstructor
-public abstract class CommonVO {
+public abstract class Common {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
